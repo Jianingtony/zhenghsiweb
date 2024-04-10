@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox 0 — starting code</title>
+    <style>
+      html {
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+      /*body {
+    width: 900px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #cda6d0;
+    padding: 0 80px 80px 80px;
+    border: 5px solid black;
+  }*/
+  img{
+    width: 900px;
+    height:300px;
+  }
+
+      header {
+        background:url("images/ae1620e3da3b094c9f93ef7682114b1.jpg");
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+     
+
+
+       Add your flexbox CSS below here */
+      
+   /* .container {
+  column-width: 10%;
+  column-gap: 20px;
+  column-rule: 4px dotted rgb(79, 185, 227);
+  }
+
+   .card {
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 50px;
+  margin: 0 0 1em 0;
+   }*/
+   .bannar {
+    width: 100%;
+    height: 884px;
+    background-color:blue;
+   }
+   .nav {
+    z-index: 999;
+    position: sticky;
+    top:-10;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: url("images/背景2.jpg") repeat-x center bottom;;
+   }
+   .nav-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 1180px;
+    height:70px;
+    
+   }
+   .nav-wrap li {
+    float: left;
+    width: 280px;
+    color:#fff;
+    font-size: 30px;
+   }
+   .nav-wrap a {
+    color:blueviolet;
+   } 
+   .nav-active {
+    background-color: bisque;
+   }
+   .nav-active a {
+    color: #000;
+   }
+   .nav-wrap li:hover {
+    background-color: bisque;
+
+   }
+   .nav-wrap li:hover>a {
+    color: #000;
+   }
+   /*.search {
+    position:absolute;
+    top:15px;
+    right:-30px;
+    width: 18px;
+    height: 19px;
+    background-color: gold;
+
+
+   }*/
+   .shell {
+    display: flex;
+    justify-content: center;
+   }
+   .nav-active {
+    background-color: #50536e;
+    width: 170px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    transition: .3s;
+    cursor: pointer;
+
+   
+    
+   }
+   .nav-active:hover{
+    background-color: #d15a39;
+  
+   }
+   .nav-active a {
+    text-decoration: none;
+    list-style-type: none;
+   }
+   .nav-active li:hover{
+    background-color: #ffb29d;
+  
+   }
+   .nav-active ul li{
+    list-style-type: none;
+    height: 0;
+    transition: .2s;
+    opacity: 0;
+    transform: translateY(-65px);
+    background-color: #e07a5f;
+  
+   }
+   .nav-active-1 {
+    background-color: bisque;
+    width: 170px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    transition: .3s;
+    cursor: pointer;
+
+   }
+   .nav-active-1 span {
+    text-decoration: none;
+    list-style-type: none;
+    color: #000;
+    
+   }
+  
+
+   
+   .nav-active ul li a{
+    text-decoration: none;
+    font-size: small ;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+   }
+   .nav-active:hover li{
+    
+
+    height: 65px;
+    opacity: 1;
+    transform: translateY(0);
+   }
+   /*下拉列表
+   .nav-list {
+    top: 40px;
+    left: 0%;
+    position:absolute;
+    width: 100%;
+    height: 140px;
+    background-color: bisque;
+    display: none;
+    text-align: center;
+
+   }
+   .nav:hover>.nav-list{
+    display: block;
+   }
+   .nav-list img{
+    margin:24px 10px 0;
+    ;
+    left: 25%;
+    width: 15%;
+    height: 50%;
+   }
+   */
+  /*轮播图*/
+ /*.bannar {
+    position: relative;
+  }*/
+ /*.bannar-box{
+    position: relative;
+  }*/
+   .bannar-box>img {
+    
+    width: 100%;
+    height: 884px;
+   }
+   .bannar-bottom {
+    position:absolute;
+    top:884px;
+    left:0;
+    bottom: 0px;
+    width: 100%;
+    height: 287px;
+    /*background-color: red;*/
+    background: url("images/背景.jpg") repeat-x center bottom;
+    
+    
+   }
+   .bannar-logo{
+    width: 100px;
+    height: 600px;
+    left: 0px;
+    top: 70px;
+    
+    background: url("images/a653da7de128af75338372f805bb25e.jpg") no-repeat;
+    position:absolute;
+    background-size: 100%;
+
+   }
+   .wrap {
+    width: 1180px;
+    margin:0 auto;
+   }
+   /*.container {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: antiquewhite;
+   }*/
+   .container {
+    margin: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+   }
+   .card {
+    display: flex;
+    justify-content: space-between;
+    background:url("images/背景2.jpg");
+    border-radius: 1rem;
+    margin: -3.5rem 0rem;
+    padding: 5rem 8rem 5rem 8rem;
+
+   }
+   .card-biaoti {
+    padding: 1rem 3rem 1rem 2rem;
+    background: url("images/背景4.jpg");;
+    
+    border: 1px 1px 1px 1px;
+   border-color: #d15a39;
+    border-radius: 1rem;
+    /*margin:0rem 1rem ;*/
+    /*display: flex;*/
+    text-align: center;
+   }
+   .card-biao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+   .card-nei {
+    /*padding: 0.5rem 1rem 0.5rem 1rem*/
+    height: 35px;
+    width: 120px;
+    background:url("images/背景4.jpg");
+    border-radius: 1rem;
+  
+    text-align: center;
+    
+    list-style-type: none;
+
+
+
+   }
+   .card-nei a:hover {
+    
+    font-size: larger;
+    color: #fff;
+   }
+   .card-nei a {
+    font-weight: 400;
+    color: #000;
+    font-size: medium;
+    list-style-type: none;
+    text-decoration: none;
+   }
+   
+
+    
+
+   
+
+      
+    </style>
+    <script>
+      window.onload=function(){
+        setInterval(change,3000)
+      }
+      var count=1;
+      function change(){
+        var img=document.getElementById("img01")
+        img.src="images/"+count+".jpg"
+        count++
+        if (count>5){
+          count=1
+        }
+      }
+  
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>欢迎来到一心一意心理科普网</h1>
+    </header>
+
+    <div class="bannar">
+      <div class="nav">  
+        <div class="nav-wrap">
+        <ul class="shell">
+          <li class="nav-active-1">
+            <span>网站首页</span>
+            
+            
+          </li>
+          <li class="nav-active">
+            <a href="#"><span>学科脉络</span></a>
+            <ul>
+              <li><a href="111.html">行为主义心理学</a></li>
+              <li><a href="renzhi.html">认知心理学</a></li>
+              <li><a href="shengli.html">生理心理学</a></li>
+              <li><a href="rengongzhineng.html">人工智能心理学</a></li>
+              <li><a href="shenjing.html">认知与神经科学</a></li>
+              <li><a href="fazhan.html">毕生发展与学习科学</a></li>
+              <li><a href="shehui.html">社会与管理心理学</a></li>
+              <li><a href="linchuang.html">健康与临床心理学</a></li>
+            </ul>
+            
+          </li>
+          <li class="nav-active">
+            <a href="#"><span>研究机构</span></a>
+            <ul>
+              <li><a href="https://psychology.fas.harvard.edu/">哈佛大学心理学部</a></li>
+              <li><a href="https://psychology.stanford.edu/">斯坦福大学心理学部</a></li>
+              <li><a href="https://psychology.yale.edu/">耶鲁大学心理学部</a></li>
+              <li><a href="https://www.ox.ac.uk/">牛津大学心理学部</a></li>
+              <li><a href="https://www.psychol.cam.ac.uk/">剑桥大学心理学部</a></li>
+              <li><a href="https://psych.princeton.edu/">普林斯顿大学心理学部</a></li>
+              <li><a href="http://www.psy.pku.edu.cn/">北京大学心理与认知科学学院</a></li>
+              <li><a href="https://psych.bnu.edu.cn/">北京师范大学心理学部</a></li>
+              <li><a href="https://psy.ecnu.edu.cn/">华东师范大学心理与认知科学学院</a></li>
+            </ul>
+          </li>
+          <li class="nav-active">
+            <a href="#"><span>关于作者</span></a>
+            <ul>
+              <li><a href=""><span>1198307580@qq.com</span></a></li>
+              <li><a href=""><span>2860222730@qq.com</span></a></li>
+              <li><a href=""><span>tonyjianing@126.com</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="search"></div>
+        
+      </div> 
+      <div class="bannar-box">
+        <img src="images/1.jpg" alt="" id="img01">
+        <div class="bannar-logo">
+         
+
+        </div>
+      
+      </div>
+      <div class="bannar-bottom">
+          <div class="container">
+            <div class="card">
+              <h2 class="card-biaoti"><span>中文期刊</span></h2>
+              <ul class="card-biao">
+                <li class="card-nei"><a href="https://cssrac.nju.edu.cn/xwdt/20210508/i199852.html">cssci</a></li>
+                <li class="card-nei"><a href="http://www.zhizhen.com/nav/mag/infos?mags=c98065e4f29a0c94a51595d279356d23">超星发现</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="card">
+                <h2 class="card-biaoti"><span>外文期刊</span></h2>
+                <ul class="card-biao">
+                  <li class="card-nei"><a href="https://link.springer.com/search?new-search=true&query=psychology">Springerlink</a></li>
+                  <li class="card-nei"><a href="https://www.sciencedirect.com/browse/journals-and-books?subject=psychology">ScienceDirect</a></li>
+                  
+                </ul>
+            </div>
+        </div>
+
+        
+        
+
+      </div>
+
+      
+    </div>
+    
+    
+  </body>
+</html>
