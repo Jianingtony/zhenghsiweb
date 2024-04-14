@@ -2,19 +2,109 @@
 <head>
 <meta charset="utf-8">
 <title>注册</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url("images/背景3.jpg") no-repeat; 
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 480px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+
+}
+.box>h1 {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 20px;
+}
+.box .input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 15px;
+
+}
+.box .input-box > label {
+    margin-bottom: 10px;
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+
+}
+.box .input-box>input {
+    box-sizing: border-box;
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    height: 35px;
+    width: 250px;
+    background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 5px;
+    transition: 0.2s;
+    outline: none;
+    padding: 0 10px;
+
+}
+
+.box .input-box >input:focus {
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.box .btn-box >input {
+    width: 120px;
+    height: 35px;
+    border: 1px solid rgba(197,81,58,0.8);
+    background:rgba(197,81,58,0.5) ;
+    color:rgba(255,255,255,0.9);
+    border-radius: 5px;
+
+}
+
+
+
+</style>
 </head>
 <body>
 	<form action="register.php" method="post">
+    <div class="box">
 		<h1>用户注册</h1>
-		<label>用户名：</label>
-		<input type="text" name="username">
-		<label>密码：</label>
-		<input type="password" name="userPwd">
-		<label>确认密码：</label>
-		<input type="password" name="reuserPwd">
-		<label>编号：</label>
-		<input type="text" name="code"> 
-		<input type="submit" value="register">
+        <div class="input-box">
+		  <label>用户名：</label>
+		  <input type="text" name="username"/>
+        </div>
+        <div class="input-box">
+		  <label>密码：</label>
+		  <input type="password" name="userPwd"/>
+        </div>
+        <div class="input-box">
+
+		 <label>确认密码：</label>
+		 <input type="password" name="reuserPwd"/>
+        </div>
+        <div class="input-box">
+		 <label>编号：</label>
+		 <input type="text" name="code"/> 
+        </div>
+        <div class="btn-box">
+		 <input type="submit" value="register">
+        </div>
+    </div>
 	</form>
 </body>
 </html>
